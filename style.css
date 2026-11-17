@@ -1,0 +1,174 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #d1d1d1;
+}
+
+.container {
+    min-height: 65vh;
+    width: 100%;
+    max-width: 480px;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin: 0;
+    gap: 20px;
+    background-color: #181818;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.display {
+    min-height: 20vh;
+    border: 2px solid #444;
+    background-color: #252525;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.display input {
+    width: 100%;
+    font-size: 36px;
+    border: none;
+    padding: 16px;
+    text-align: right;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    justify-items: center;
+    align-items: center;
+}
+
+.btn {
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.number {
+    color: white;
+    background-color: black;
+}
+
+.operator {
+    background-color: black;
+    color: orange;
+}
+
+.equal {
+    background-color: orange;
+    color: white;
+}
+
+.clear {
+    background-color: black;
+    color: orange;
+}
+
+.backspace {
+    background-color: black;
+    color: white;
+}
+
+.percentage {
+    background-color: black;
+    color: white;
+}
+
+.zero {
+    grid-row: 5/6;
+    grid-column: 2/3;
+}
+
+.point {
+    grid-row: 5;
+    grid-column: 3;
+}
+
+.equal {
+    grid-row: 5;
+    grid-column: 4;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .display {
+        min-height: 150px;
+    }
+
+    .btn {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 280px) {
+    .container {
+        padding: 16px;
+        width: 96vw;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-height: 700px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        min-height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        gap: 12px;
+        margin-block: 10px;
+    }
+
+    .display {
+        min-height: 100px;
+    }
+}
